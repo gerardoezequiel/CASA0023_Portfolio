@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "CASA0023_Portfolio",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2"
+    "text": "Welcome to My CASA0023 Learning Portfolio\nThis portfolio documents my journey through CASA0023 - Remotely Sensing Cities and Environments. Throughout this book, you’ll find:"
   },
   {
     "objectID": "intro.html",
@@ -26,5 +26,12 @@
     "title": "References",
     "section": "",
     "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "index.html#portfolio-structure",
+    "href": "index.html#portfolio-structure",
+    "title": "CASA0023_Portfolio",
+    "section": "Portfolio Structure",
+    "text": "Portfolio Structure\nThis portfolio is organised into several key sections:\n\nIntroduction: Background and learning objectives\nWeekly Content: Detailed weekly learning and practical work\nProject Work: Applied remote sensing analyses\nSummary: Reflection on key learnings and future applications\n\nLet’s begin exploring the fascinating world of remote sensing! 🛰️"
   }
 ]

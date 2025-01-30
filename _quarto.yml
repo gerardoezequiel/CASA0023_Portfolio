@@ -3,8 +3,7 @@ project:
 
 book:
   title: "CASA0023_Portfolio"
-  author: "Norah Jones"
-  date: "1/18/2024"
+  author: "Gerardo Ezequiel Martin Carreno"
   chapters:
     - index.qmd
     - intro.qmd

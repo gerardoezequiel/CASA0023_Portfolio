@@ -1,9 +1,16 @@
-# Preface {.unnumbered}
+# Welcome to My CASA0023 Learning Portfolio {.unnumbered}
 
-This is a Quarto book.
+This portfolio documents my journey through CASA0023 - Remotely Sensing Cities and Environments. Throughout this book, you'll find:
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+my reflections on the weekly content
+## Portfolio Structure
 
-```{r}
-1 + 1
-```
+This portfolio is organised into several key sections:
+
+1. **Introduction**: Background and learning objectives
+2. **Weekly Content**: Detailed weekly learning and practical work
+3. **Project Work**: Applied remote sensing analyses
+4. **Summary**: Reflection on key learnings and future applications
+
+Let's begin exploring the fascinating world of remote sensing! 🛰️
+just a test 

@@ -1,7 +1,7 @@
 {
-  "hash": "f89d2cae73031aafc1d0dc4ae48f295e",
+  "hash": "ef36e971784d24d9965ce3da83a1155e",
   "result": {
-    "markdown": "# Preface {.unnumbered}\n\nThis is a Quarto book.\n\nTo learn more about Quarto books visit <https://quarto.org/docs/books>.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n:::\n",
+    "markdown": "# Welcome to My CASA0023 Learning Portfolio {.unnumbered}\n\nThis portfolio documents my journey through CASA0023 - Remotely Sensing Cities and Environments. Throughout this book, you'll find:\n\n- Weekly learning reflections\n- Practical applications of remote sensing\n- Project work and analyses\n- Technical skills development\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output .cell-output-stdout}\n```\n[1] \"January 30, 2025\"\n```\n:::\n:::\n\n\n## Portfolio Structure\n\nThis portfolio is organised into several key sections:\n\n1. **Introduction**: Background and learning objectives\n2. **Weekly Content**: Detailed weekly learning and practical work\n3. **Project Work**: Applied remote sensing analyses\n4. **Summary**: Reflection on key learnings and future applications\n\nLet's begin exploring the fascinating world of remote sensing! 🛰️\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
