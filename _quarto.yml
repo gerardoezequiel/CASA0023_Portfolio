@@ -1,22 +1,54 @@
 project:
   type: book
+  output-dir: docs
 
 book:
-  title: "CASA0023_Portfolio"
+  title: "CASA0023 - Remote Sensing Learning Diary"
   author: "Gerardo Ezequiel Martin Carreno"
+  
+  navbar:
+    title: "CASA0023 - Remote Sensing Learning Diary" 
+    background: light
+    search: true
+    right:
+      - icon: github
+        href: https://github.com/gerardoezequiel
+      - icon: linkedin
+        href: https://www.linkedin.com/in/gerardoezequiel
+  
+  sidebar:
+    style: "floating"
+    search: true
+  
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
-    - references.qmd
-
+    - Week-1.qmd
+    - Week-2.qmd
+    - Week-3.qmd
+    - Week-4.qmd
+    - Week-5.qmd
+    - Week-6.qmd
+    - Week-7.qmd
+    - Week-8.qmd
 bibliography: references.bib
+csl: apa.csl
 
 format:
   html:
-    theme: cosmo
-  pdf:
-    documentclass: scrreprt
-
+    theme:
+      light: [simplex]
+      dark: [darkly]
+    toc: true
+    toc-location: right
+    toc-title: "On this page"
+    toc-collapse: true
+    smooth-scroll: true
+    code-fold: true
+    link-external-icon: true
+    link-external-newwindow: true
+    citations-hover: true
+    anchor-sections: true
+  
+    
 editor: visual
 

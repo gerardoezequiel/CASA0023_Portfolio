@@ -1,0 +1,46 @@
+---
+title: "Synthetic Apperture Radar"
+---
+
+## Summary
+
+In the las week of the course we explored Synthetic Aperture Radar (SAR), a unique remote sensing technology distinct from the passive optical sensors discussed previously. Unlike passive sensors that detect reflected sunlight, SAR is an active sensor. It emits its own microwave radiation and measures the signal reflected back from the Earth's surface. Because microwaves are much longer wavelengths than visible or infrared light (centimeters vs. nanometers), SAR can penetrate clouds, making it an all-weather imaging system.
+
+A key concept in SAR is the "synthetic aperture."  Because the resolution of radar is related to the antenna size relative to the wavelength, a very large antenna would normally be needed to achieve high resolution.  SAR cleverly overcomes this by using the satellite's motion along its orbit.  By combining signals received at different points along the flight path, it synthesises a much larger antenna, dramatically improving resolution.  This allows a relatively small physical antenna to produce high-resolution imagery.
+
+SAR data provides information beyond what optical sensors can offer. The primary measurement is backscatter (or amplitude), representing the intensity of the radar signal returned to the sensor. Different surfaces interact with radar signals differently. Smooth surfaces like calm water reflect the signal away (low backscatter, appearing dark), while rough surfaces like bare ground scatter it in all directions, including back to the sensor (higher backscatter). Buildings often exhibit a "double bounce," reflecting strongly.
+
+![Different materials has different backscatter - Credit: @earthsciencedatasystemsSyntheticApertureRadar2021](img/8_SAR_Polarization.jpg)
+
+SAR signals also have polarisation. The signal can be transmitted and received horizontally (H) or vertically (V). Different polarizations (HH, VV, HV, VH) interact differently with surfaces. For example, rough surfaces scatter VV signals well, while vegetation often scatters cross-polarized signals (VH or HV) more effectively. Finally, SAR measures the phase of the returning signal. Phase changes are subtle, but by comparing repeat observations, we can detect very small changes in distance, enabling applications like monitoring ground deformation after earthquakes.
+
+![Different polarisation types - Credit: @IntroductionSARHyP3 ](img/8_polarisation.png)
+
+## Applications
+
+The operationalization of SAR reveals both its unique capabilities and inherent limitations. While @Martinis2015 demonstrated automated flood mapping with TerraSAR-X, subsequent studies like @Grimaldi2020 exposed challenges in detecting submerged vegetation - a critical limitation in complex floodplains where water and vegetation coexist. This underscores the need for multi-temporal analysis and fusion with optical data, particularly in tropical environments where cloud cover persists during rainy seasons.
+
+The forestry sector exemplifies SAR's transformative potential and current constraints. While @Shimada2014 achieved global forest mapping using ALOS PALSAR, their 25m resolution proved insufficient for detecting small-scale degradation - a critical gap in REDD+ monitoring. Newer missions like BIOMASS [@LeToan2011] promise 3D structure mapping but face challenges in separating ground and volume scattering, particularly in dense tropical canopies. Meanwhile, @Bouvet2018's African biomass maps revealed SAR's regional calibration dependence, where savanna woodlands required different backscatter-biomass relationships than closed forests.
+
+Agricultural applications demonstrate SAR's operational value and interpretative complexities. While @Bargiel2017 successfully classified crops using temporal backscatter patterns, their accuracy dropped significantly when applied to regions with different farming practices - a reminder that SAR phenology requires local calibration. Soil moisture retrieval faces similar contextual challenges; @Wagner1999's pioneering work achieved ±5% volumetric accuracy only in bare soils, with vegetation cover introducing errors exceeding 20% without ancillary data.
+
+Maritime surveillance showcases SAR's unparalleled capabilities and persistent false-alarm challenges. @Brusch2011's ship detection system achieved 90% detection rates in open oceans but struggled near coastal infrastructure, where wave patterns and metallic structures mimic vessel signatures. While @Brekke2005's oil spill detection framework remains foundational, recent spills like the 2020 Mauritius disaster revealed continued difficulties in distinguishing thin biofilms from petroleum slicks - a critical limitation for regulatory enforcement.
+
+
+## Reflection
+
+Before this week, SAR had always felt somewhat enigmatic to me; I appreciated its power, but I found many of its images and underlying concepts less intuitive than those of optical remote sensing. However, after our focused study, I now feel more confident in interpreting SAR data. One striking moment was when I compared a SAR image to its optical counterpart: features such as forests, which appeared straightforward in optical imagery, were depicted quite differently in radar data, and subtle details—like waterlogged fields—became apparent only in the SAR image. This exercise vividly illustrated how SAR offers a fundamentally different perspective on the Earth's surface.
+
+Additionally, our technical discussions revealed the complexities of SAR operation. Understanding that the radar is side-looking helped explain phenomena such as layover, where tall objects are smeared towards the sensor, and shadow effects, where features are obscured behind taller obstacles. These insights underscored the importance of using supplementary data, like a DEM, for proper orthorectification. I also appreciated learning about real-world applications, such as flood mapping and maritime surveillance using Sentinel-1 imagery, which demonstrated that SAR is not merely an experimental tool, but a highly operational technology.
+
+On reflection, I recognise that developing SAR expertise will significantly enhance my versatility as a remote sensing analyst. I am now motivated to pursue further training—perhaps through an online tutorial or short course using ESA's SNAP toolbox—to refine my skills in processing SAR data. Although the inherent speckle noise in SAR images initially appeared daunting, I now view it as a characteristic feature of coherent imaging that can be effectively managed with appropriate filtering techniques.
+
+In summary, this week was a challenging but enlightening foray into the microwave realm of remote sensing. The experience has broadened my perspective, reinforcing that SAR not only complements optical data but also provides unique insights in conditions where optical sensors struggle, thereby enriching my overall analytical toolkit.
+
+Images
+
+Spectrum
+
+SAR Polarisation
+
+## References

@@ -1,16 +1,17 @@
-# Welcome to My CASA0023 Learning Portfolio {.unnumbered}
+## Welcome to my CASA0023 Learning Diary {.unnumbered}
 
-This portfolio documents my journey through CASA0023 - Remotely Sensing Cities and Environments. Throughout this book, you'll find:
+This is where I'll be sharing my experiences from CASA0023 - Remotely Sensing Cities and Environments, part of my Urban Spatial Science MSc at UCL's Centre for Advanced Spatial Analysis. Over the coming weeks, I'll be getting hands-on with new techniques, diving into research papers, and putting remote sensing methods into practice while reflecting on what I'm learning along the way.
 
-my reflections on the weekly content
-## Portfolio Structure
+A bit about me - I’m Gerardo Ezequiel—spatial data scientist, environmental scientist by training, and a firm believer that cities hold the key to a more sustainable future. My world revolves around maps (digital, paper, mental—you name it), urban data, and a good cup of coffee. Seriously, if there’s a map involved, I’m interested. If there’s coffee, even better. 
 
-This portfolio is organised into several key sections:
+![Me, attempting to navigate the Lake District... with a giant London map towel. Clearly, I take my urban science *very* seriously. (Coffee helps too.)](/img/gera.jpeg)
 
-1. **Introduction**: Background and learning objectives
-2. **Weekly Content**: Detailed weekly learning and practical work
-3. **Project Work**: Applied remote sensing analyses
-4. **Summary**: Reflection on key learnings and future applications
+## Why Remote Sensing?
 
-Let's begin exploring the fascinating world of remote sensing! 🛰️
-just a test 
+I’ve worked with geospatial data for a while now, but remote sensing has always felt like this vast, slightly intimidating universe. I’ve often relied on pre-processed datasets, but I’ve also hit my fair share of dead ends—searching for cloud-free images, struggling with mismatched spatial resolutions, or just wondering what half the jargon even means. Turns out, satellites don’t just magically deliver the perfect dataset on demand (who knew?).
+
+That’s why I’m here. This is my chance to demystify remote sensing, get hands-on with raw satellite data, and understand what’s actually going on under the hood. I want to go from just using ready-made products to properly analysing, processing, and making sense of the data myself.
+
+Consider this diary my personal notebook - a place to jot down observations, lightbulb moments and the occasional frustration. Let's see where this adventure leads!
+
+

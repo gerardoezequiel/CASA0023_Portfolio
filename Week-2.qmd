@@ -1,0 +1,13 @@
+---
+title: "Xaringan Presentation"
+---
+
+This week's diary documents a Xaringan presentation on the Thermal Infrared Sensor (TIRS) in Landsat 8– a presentation showcasing the sensor's design and its role in monitoring Earth's surface temperature.
+
+```{r echo = FALSE, out.width='40%'}
+
+xaringanExtra::embed_xaringan(
+  url = "https://gerardoezequiel.github.io/xaringanpresentation/",
+  ratio = "16:9")
+
+```

@@ -1,0 +1,60 @@
+---
+title: "Assessment of classification methods"
+---
+
+# Week 7: Understanding Classification in Remote Sensing
+
+## Summary
+
+This week we continued with classification but now focusing on determining the accuracy of classification, moving beyond basic pixel‐based approaches towards more refined methods that account for the spatial structure of remotely sensed data. Building on the foundations laid in previous sessions, we explored methods such as Object‐Based Image Analysis (OBIA) and sub‐pixel analysis, which allow for a more natural segmentation of imagery.
+
+### Object‐Based Image Analysis (OBIA)
+
+OBIA involves grouping pixels into coherent objects or 'superpixels' based on spectral and spatial similarities. Algorithms such as Simple Linear Iterative Clustering (SLIC) partition an image into segments that are both spatially compact and spectrally homogenous, enabling classification at the object level—be it buildings, water bodies or vegetation patches—rather than relying solely on individual pixels.
+
+### Sub‐Pixel Analysis
+
+In contrast, sub‐pixel analysis recognises that a single pixel may represent a mix of land‐cover types. Techniques such as Multiple Endmember Spectral Mixture Analysis (MESMA) are used to unmix a pixel's spectral signature and estimate the proportion of different classes (e.g. soil, vegetation, impervious surfaces). This approach is particularly beneficial when working with lower resolution imagery where mixed pixels are common.
+
+![Subpixel analysis method - Credit: @aiImprovedSubPixelMapping2014a](img/7_subpixel.png)
+
+### Accuracy Assessment
+
+A central focus this week was on evaluating how well our classification models actually performed. It's one thing to create a map; it's another to know how trustworthy that map is. I explored several key metrics, each providing a different perspective on accuracy.
+
+Classification accuracy assessment relies on several key metrics derived from a **confusion matrix**.  The confusion matrix is a table that summarizes the performance of a classification model by showing the counts of:
+
+*   **True Positives (TP):**  Correctly predicted positive cases.
+*   **True Negatives (TN):** Correctly predicted negative cases.
+*   **False Positives (FP):**  Incorrectly predicted positive cases (Type I error).
+*   **False Negatives (FN):** Incorrectly predicted negative cases (Type II error).
+
+From this matrix, we can calculate several important metrics:
+
+*   **Producer's Accuracy (Recall):**  Measures the proportion of *actually* positive cases that were correctly identified.  It answers the question: "For all instances of a specific class (e.g., forest) in the reference data, what proportion did the classification correctly identify?"  A high producer's accuracy indicates that the model is good at *finding* all instances of that class. It is calculated as:
+
+    $$ \text{Producer's Accuracy (Recall)} = \frac{TP}{TP + FN} $$
+
+*   **User's Accuracy (Precision):** Measures the proportion of *predicted* positive cases that were actually correct. It answers the question: "For all instances that the classification *labeled* as a specific class (e.g., forest), what proportion actually *belonged* to that class?" High user's accuracy means that when the map labels something, you can trust that label. It is calculated as:
+
+    $$ \text{User's Accuracy (Precision)} = \frac{TP}{TP + FP} $$
+* **Overall Accuracy:** Measures the proportion of all samples that were correctly classified.
+    $$ \text{Overall Accuracy} = \frac{TP + TN}{TP + TN + FP + FN} $$
+
+Another metric, the Kappa Coefficient, tries to go a step further by accounting for how much agreement between the map and reality might just be due to random chance. However, it's not without its critics, and its interpretation can be tricky. We also looked at ROC Curves and F1 Scores, which provide even more nuanced ways to assess performance, especially when dealing with imbalanced datasets (where some classes are much more common than others). They help us understand the trade-off between correctly identifying positive cases (true positives) and incorrectly identifying negative cases as positive (false positives).
+
+We also delved into more advanced machine learning approaches, particularly focusing on how to validate our models in a spatially aware way. Techniques like spatial spatial cross-validation is crucial. Helps avoiding spatial autocorrelation, which can artificially inflate our accuracy estimates. By ensuring that training and testing data are spatially separated, we get a much more realistic sense of how well our model will generalise to new, unseen areas and prevent leakage.
+
+## Applications in Research
+
+Advanced classification techniques enable more nuanced analysis across scales. Object-Based Image Analysis (OBIA) has proven particularly valuable for land cover classification, with @Ma2017_OBIAReview demonstrating how supervised OBIA methods can achieve >85% accuracy in complex metropolitan areas by incorporating structural metrics like building shape and road connectivity. For sub-pixel analysis, @Liu2013_UrbanMESMA showed spectral unmixing techniques improved urban vegetation mapping accuracy by 22% compared to traditional classifications in Atlanta, GA, while @Thorp2013_RangelandMESMA successfully quantified shrub encroachment in arid rangelands using Landsat-based MESMA across 150,000 km².
+
+Spatial validation methods address critical limitations in accuracy assessment. @Stock2022_iSLOOCV developed iterative spatial cross-validation that reduced accuracy overestimation by 18-35% in marine remote sensing models compared to random splits. This approach ensures models generalise to new locations rather than just nearby pixels, particularly crucial for monitoring programs requiring consistent performance across political/ecological boundaries.
+
+## Reflection
+
+This week's exploration of advanced classification really opened my eyes to the nuances of different approaches. I found the balance between producer's and user's accuracies particularly striking—it really highlights the trade-off between over-classification and under-classification. The discussion on spatial cross-validation was an 'aha!' moment for me. 'd been treating validation like a simple random sampling problem, never considering how spatial relationships could skew our accuracy assessments. It seems so obvious now - pixels next to each other aren't independent observations. This realisation fundamentally changes how I'll approach validation in my future work.
+
+OBIA and sub-pixel analysis showed me how far we've come from basic pixel-based methods. These approaches acknowledge what we intuitively know, that landscapes don't conform to neat pixel boundaries. Instead of forcing reality into a rigid grid, these methods adapt to the natural complexity of our world. It's not just about better accuracy numbers; it's about creating classifications that actually reflect what we see on the ground.
+
+## References {.unnumbered}

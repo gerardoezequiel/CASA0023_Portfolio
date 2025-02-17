@@ -1,0 +1,382 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "CASA0023 - Remote Sensing Learning Diary",
+    "section": "",
+    "text": "Welcome to my CASA0023 Learning Diary\nThis is where I’ll be sharing my experiences from CASA0023 - Remotely Sensing Cities and Environments, part of my Urban Spatial Science MSc at UCL’s Centre for Advanced Spatial Analysis. Over the coming weeks, I’ll be getting hands-on with new techniques, diving into research papers, and putting remote sensing methods into practice while reflecting on what I’m learning along the way.\nA bit about me - I’m Gerardo Ezequiel—spatial data scientist, environmental scientist by training, and a firm believer that cities hold the key to a more sustainable future. My world revolves around maps (digital, paper, mental—you name it), urban data, and a good cup of coffee. Seriously, if there’s a map involved, I’m interested. If there’s coffee, even better.",
+    "crumbs": [
+      "Welcome to my CASA0023 Learning Diary"
+    ]
+  },
+  {
+    "objectID": "index.html#welcome-to-my-casa0023-learning-diary",
+    "href": "index.html#welcome-to-my-casa0023-learning-diary",
+    "title": "CASA0023 - Remote Sensing Learning Diary",
+    "section": "",
+    "text": "Me, attempting to navigate the Lake District… with a giant London map towel. Clearly, I take my urban science very seriously. (Coffee helps too.)",
+    "crumbs": [
+      "Welcome to my CASA0023 Learning Diary"
+    ]
+  },
+  {
+    "objectID": "index.html#why-remote-sensing",
+    "href": "index.html#why-remote-sensing",
+    "title": "CASA0023 - Remote Sensing Learning Diary",
+    "section": "Why Remote Sensing?",
+    "text": "Why Remote Sensing?\nI’ve worked with geospatial data for a while now, but remote sensing has always felt like this vast, slightly intimidating universe. I’ve often relied on pre-processed datasets, but I’ve also hit my fair share of dead ends—searching for cloud-free images, struggling with mismatched spatial resolutions, or just wondering what half the jargon even means. Turns out, satellites don’t just magically deliver the perfect dataset on demand (who knew?).\nThat’s why I’m here. This is my chance to demystify remote sensing, get hands-on with raw satellite data, and understand what’s actually going on under the hood. I want to go from just using ready-made products to properly analysing, processing, and making sense of the data myself.\nConsider this diary my personal notebook - a place to jot down observations, lightbulb moments and the occasional frustration. Let’s see where this adventure leads!",
+    "crumbs": [
+      "Welcome to my CASA0023 Learning Diary"
+    ]
+  },
+  {
+    "objectID": "Week-1.html",
+    "href": "Week-1.html",
+    "title": "1  Introduction to Remote Sensing",
+    "section": "",
+    "text": "1.1 Summary",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Remote Sensing</span>"
+    ]
+  },
+  {
+    "objectID": "Week-1.html#summary",
+    "href": "Week-1.html#summary",
+    "title": "1  Introduction to Remote Sensing",
+    "section": "",
+    "text": "Overview\nThis week served as a foundational introduction to remote sensing, a field I’ve always found fascinating from my background as an environmental scientist. Remote sensing is essentially about acquiring and analysing information about the Earth’s surface from a distance, primarily using sensors on aircraft and satellites.\n\n\n1.1.1 Sensor Technologies and Data Collection\nOne of the major insights was learning how sensor technologies work. We discovered that remote sensing platforms monitor and record electromagnetic radiation reflected from the Earth at specific wavelengths. This means they capture both the light we can see and energy in wavelengths our eyes cannot detect. Sensor technologies record electromagnetic radiation across various wavelengths, including those beyond visible light. This allows us to perceive features and characteristics not directly observable by the human eye. Different materials have unique spectral signatures, reflecting and absorbing energy differently across the electromagnetic spectrum. This is visualised in the figure below.\n\n\n\nElectromagnetic spectrum showing different wavelengths and their applications in remote sensing - Credit: Introduction to the Electromagnetic Spectrum - NASA Science (2016)\n\n\nA key concept here is the difference between active and passive sensors. Passive sensors, such as optical cameras, simply measure natural radiation (often sunlight reflected from the surface), whereas active sensors, like those used in radar satellites, emit their own signals to detect reflections.\n\n\n\nActive and passive sensors - Credit: Earth Science Data Systems (2021)\n\n\n\n\n1.1.2 Types of Data Resolution\nOur discussions also focused into the different types of resolutions that are crucial to the quality and utility of remote sensing data:\n\nSpatial Resolution: Refers to the size of each pixel or grid cell in an image. Higher spatial resolution is ideal for capturing fine-scale details, though it usually comes at the cost of broader coverage.\nSpectral Resolution: Indicates the number of wavelength bands a sensor can capture. More bands allow for better discrimination of different materials on the ground.\nTemporal Resolution: Relates to how frequently a satellite revisits the same area. For example, while high-resolution sensors offer excellent detail, they might not revisit as frequently as systems like MODIS.\nRadiometric Resolution: Reflects the sensor’s sensitivity to differences in the intensity of the radiation. Higher radiometric resolution means that even subtle distinctions can be detected.\n\n\n\n\nResolutions - Different types of resolution in remote sensing data, including spatial (pixel size), temporal (observation frequency), radiometric (value range), and spectral (wavelength bin width). - Credit: Mahood et al. (2023)\n\n\nLearning about these trade-offs really got me thinking—choosing the right sensor depends on the specific requirements of the analysis, whether that means capturing high resolution details or tracking changes over time.\n\n\n1.1.3 Atmospheric Interference\nAnother critical area was atmospheric interference. The atmosphere doesn’t simply let all of the incoming radiation pass through unaltered. Factors such as cloud cover, scattering, and the angle at which light is reflected off surfaces can change the intensity and quality of the data recorded. Understanding these distortions is key, as they can lead to inaccuracies if not properly accounted for. This underscored the importance of techniques like sensor calibration and atmospheric correction, which our practical session touched upon.\n\n\n1.1.4 End User Data Analysis\nOn the practical side, we were introduced to how end users can download and manipulate remote sensing data from platforms like ESA’s Sentinel and USGS’s Landsat. Tools such as QGIS and SNAP enable us to process these huge datasets and extract valuable insights.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Remote Sensing</span>"
+    ]
+  },
+  {
+    "objectID": "Week-1.html#applications",
+    "href": "Week-1.html#applications",
+    "title": "1  Introduction to Remote Sensing",
+    "section": "1.2 Applications",
+    "text": "1.2 Applications\nSelecting the appropriate sensor involves critical trade-offs in remote sensing applications. High-resolution sensors provide detailed local information but may lack the temporal frequency of moderate-resolution systems like MODIS, which offer more frequent global coverage. This necessitates carefully balancing spatial detail and temporal frequency to align with specific study objectives.\nRemote sensing has proven pivotal in environmental mapping, with satellites monitoring land cover changes and deforestation. Hansen Hansen et al. (2013) demonstrated this by utilising 30-metre resolution Landsat data to map global forest loss and gain from 2000 to 2012. This analysis revealed a loss of 2.3 million square kilometres and a gain of 0.8 million square kilometres during that period. Building on this work, the Global Forest Watch platform (Global Forest Watch, 2025) exemplifies how the practical application of remote sensing research can help communicate science and provide actionable insights. By leveraging Landsat’s 30-meter resolution data, it provides near-real-time forest monitoring capabilities. This approach enables both long-term trend analysis and actionable environmental insights, effectively balancing spatial and temporal resolution needs.\nThe embedded map and chart from Global Forest Watch (Global Forest Watch, 2025) illustrate global tree cover loss from 2000 to 2023. Analyzing this data helps identify regions experiencing significant deforestation and investigate potential causes, such as agricultural expansion or logging activities. This information is crucial for policymakers, conservationists, and researchers aiming to develop strategies to mitigate forest loss and promote sustainable land use practices.\n\n\n\n\nMoreover, the trend towards multi-sensor data fusion is evident in contemporary studies. Chakraborty & Kant’s 2020 study (Chakraborty & Kant, 2020) innovatively combined Landsat-8 thermal bands with MODIS data to map Delhi’s urban heat islands, demonstrating how multi-sensor fusion can overcome individual system limitations. This method leverages the high spatial resolution of Landsat-8 and the frequent temporal coverage of MODIS, providing a comprehensive understanding of urban heat distribution. Meanwhile Richards et al. (Richards et al., 2021) used Sentinel-2’s 10m resolution and LiDAR to map green infrastructure in London, revealing how high spatial resolution helps identify small urban gardens that moderate-temperature extremes. This resonated with our discussions about spectral resolution - their use of red-edge bands (705nm) helped distinguish stressed vegetation crucial for climate adaptation planning.\nAlso interesting was Gevaert et al.’s 2022 paper (Gevaert et al., 2022) using Sentinel-1 radar to map informal settlements in Nairobi. The active sensor’s cloud-penetration ability (crucial in tropical regions) and texture analysis of building materials showed how remote sensing can address social sustainability challenges. It made me reconsider my initial focus on environmental applications - these techniques could revolutionize urban poverty mapping while lacking high-res optical imagery.\nAs remote sensing technology accelerates—with machine learning breakthroughs and novel sensor networks—we’re witnessing an explosion of applications that continues to grow. What excites me most is how these technological leaps are creating new interdisciplinary possibilities every day. This endless horizon of applications positions remote sensing as one of our most dynamic tools for understanding and improving our planet.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Remote Sensing</span>"
+    ]
+  },
+  {
+    "objectID": "Week-1.html#reflection",
+    "href": "Week-1.html#reflection",
+    "title": "1  Introduction to Remote Sensing",
+    "section": "1.3 Reflection",
+    "text": "1.3 Reflection\nLooking back on this first week, I feel a mix of excitement and challenge. It’s exciting to reconnect with core Environmental Science concepts I’ve studied before — like seeing deforestation or urban climate impacts through the lens of real world data and applications has been really thought provoking. Remote sensing adds a whole new dimension to topics I was already passionate about, letting me visualise and quantify changes that I often only discuss abstractly because of the lack ofaccess to the data. At the same time, diving into the technical side (mastering the jargon of spectral bands, resolutions, and sensor types) has been challenging. There were moments when the details of electromagnetic wavelengths or data processing felt a bit overwhelming. Yet, working through those complexities has been rewarding, as it’s giving me a more concrete understanding of how we observe our planet.\nAs an environmental scientist with passion in urban sustainability, I am also fascinated by how remote sensing technology has evolved. Beyond its research applications, this technology is having concrete impacts on policy decisions. Remote sensing data now directly informs urban planning and conservation strategies. The technical advances in how we collect, store, process, and visualise this data it’s also fascinatinf for me and opens up entirely new possibilities that would have seemed impossible just years ago.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Remote Sensing</span>"
+    ]
+  },
+  {
+    "objectID": "Week-1.html#references",
+    "href": "Week-1.html#references",
+    "title": "1  Introduction to Remote Sensing",
+    "section": "References",
+    "text": "References\n\n\n\n\nChakraborty, T., & Kant, Y. (2020). Urban heat island mitigation: GIS-based analysis for delhi. Sustainable Cities and Society, 54, 102013. https://doi.org/10.1016/j.scs.2020.102013\n\n\nEarth Science Data Systems, N. (2021, May 18). Remote Sensing | NASA Earthdata [Data Basics]. Earth Science Data Systems, NASA. https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/remote-sensing\n\n\nGevaert, C. M., Persello, C., Sliuzas, R., & Vosselman, G. (2022). Informal settlement mapping with Sentinel-1 SAR Data: A Nairobi case study. Remote Sensing of Environment, 280, 113187. https://doi.org/10.1016/j.rse.2022.113187\n\n\nGlobal Forest Watch. (2025). Global Deforestation Rates & Statistics by Country  GFW. https://www.globalforestwatch.org/dashboards/global?category=undefined.\n\n\nHansen, M. C., Potapov, P. V., Moore, R., Hancher, M., Turubanova, S. A., Tyukavina, A., Thau, D., Stehman, S. V., Goetz, S. J., Loveland, T. R., Kommareddy, A., Egorov, A., Chini, L., Justice, C. O., & Townshend, J. R. G. (2013). High-Resolution Global Maps of 21st-Century Forest Cover Change. Science, 342(6160), 850–853. https://doi.org/10.1126/science.1244693\n\n\nIntroduction to the Electromagnetic Spectrum - NASA Science. (2016, August 10). https://science.nasa.gov/ems/01_intro/\n\n\nMahood, A. L., Joseph, M. B., Spiers, A. I., Koontz, M. J., Ilangakoon, N., Solvik, K. K., Quarderer, N., McGlinchy, J., Scholl, V. M., St. Denis, L. A., Nagy, C., Braswell, A., Rossi, M. W., Herwehe, L., Wasser, L., Cattau, M. E., Iglesias, V., Yao, F., Leyk, S., & Balch, J. K. (2023). Ten simple rules for working with high resolution remote sensing data. Peer Community Journal, 3. https://doi.org/10.24072/pcjournal.223\n\n\nRichards, D. R., Masoudi, M., Oh, R. R. Y., & Yando, E. S. (2021). Mapping urban green infrastructure: A deep learning approach using Sentinel-2 and LiDAR data. Urban Forestry & Urban Greening, 63, 127236. https://doi.org/10.1016/j.ufug.2021.127236",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Remote Sensing</span>"
+    ]
+  },
+  {
+    "objectID": "Week-2.html",
+    "href": "Week-2.html",
+    "title": "2  Xaringan Presentation",
+    "section": "",
+    "text": "This week’s diary documents a Xaringan presentation on the Thermal Infrared Sensor (TIRS) in Landsat 8– a presentation showcasing the sensor’s design and its role in monitoring Earth’s surface temperature.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Xaringan Presentation</span>"
+    ]
+  },
+  {
+    "objectID": "Week-3.html",
+    "href": "Week-3.html",
+    "title": "3  Remote Sensing Data",
+    "section": "",
+    "text": "3.1 Summary",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Remote Sensing Data</span>"
+    ]
+  },
+  {
+    "objectID": "Week-3.html#summary",
+    "href": "Week-3.html#summary",
+    "title": "3  Remote Sensing Data",
+    "section": "",
+    "text": "Overview\nThis week’s session explored the evolution of satellite imagery and the essential preprocessing steps that transform raw sensor data into reliable analytical tools. We revisited early innovations, such as the Multispectral Scanner (MSS) on Landsat missions, and examined how these developments paved the way for modern multispectral datasets. This foundational knowledge is critical for understanding the advanced processing techniques applied in contemporary remote sensing.\n\n\n3.1.1 Corrections\nBefore raw satellite images can be effectively utilised, several corrections are imperative to mitigate inherent distortions:\n\nGeometric Correction: Aligns images using ground control points to rectify perspective distortions caused by off‐nadir imaging.\nOrthorectification / Topographic Correction: Adjusts images so that pixels appear as if viewed from directly overhead, compensating for the effects of terrain variations using elevation data.\nAtmospheric Correction: Removes undesired effects due to haze, scattering, and absorption, which otherwise might alter the true reflectance values.\n\nThese correction processes ensure that the imagery accurately represents the Earth’s surface for further analysis.\n\n\n3.1.2 Radiometric Calibration\nFollowing the corrections, radiometric calibration transforms raw digital numbers into physically meaningful values, such as radiance or reflectance. This conversion employs sensor-specific gain and bias factors derived from pre-launch calibration data. Although modern Level-2 products typically arrive pre-calibrated, understanding this process is essential, especially when addressing issues such as sensor drift or inter-sensor variability over multi-temporal datasets.\n\n\n\nSensor correction and radiometric calibrarion - Credit: Kelcey & Lucieer (2012)\n\n\n\n\n3.1.3 Enhancements and Data Joining\nAfter calibration, additional enhancements refine the imagery for analytical purposes:\n\nData Mosaicking and Joining: Techniques such as mosaicking or feathering are used to blend adjacent satellite tiles seamlessly, eliminating abrupt transitions at tile boundaries.\nApplication of Filters: Convolution filters (both smoothing and sharpening) are applied to highlight specific features or to reduce noise, by computing local statistics like the mean or variance over a moving window.\nDimensionality Reduction (PCA): Principal Component Analysis is utilised to reduce redundancy in multispectral data while preserving the most significant variations, thus facilitating more efficient subsequent analyses.\n\n\n\n\nPrincipal Component analysis recude the variance by projecting the image in a new space - Credit: ArcGIS Blog (2025)\n\n\nThese enhancements collectively contribute to a more robust dataset, which is crucial for advancing remote sensing applications.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Remote Sensing Data</span>"
+    ]
+  },
+  {
+    "objectID": "Week-3.html#applications",
+    "href": "Week-3.html#applications",
+    "title": "3  Remote Sensing Data",
+    "section": "3.2 Applications",
+    "text": "3.2 Applications\nPreprocessing the data captured is essential in remote sensing, as it transforms raw satellite data into a reliable foundation for decision-making. In their study, Ban and Kim Ban & Kim (2024) demonstrate how aligning SAR and optical imagery using street intersections can significantly enhance flood modelling. Their method not only improves data integration across sensors but also boosts overall model accuracy, although its dependence on well-defined urban features might limit its applicability in less structured or rural environments.\nIn complex urban settings, addressing three-dimensional distortions is crucial. Rizeei and Pradhan (Rizeei & Pradhan, 2019) tackled this challenge by incorporating LiDAR-derived building heights into their orthorectification process, effectively reducing parallax errors. This approach yields highly accurate maps that are invaluable for urban planning tasks such as optimising solar panel placement, though it does raise questions about its adaptability in cities with diverse architectural styles or limited LiDAR data. This extra information of the building height could also be really helpful to understand the urban heat island effect as the height of the building could help also help undestand the shadowing effect.\nEnvironmental monitoring also benefits from advanced preprocessing techniques. Lu et al. Lu et al. (2018) applied the FLAASH algorithm to Landsat imagery of Lake Taihu, successfully removing atmospheric scattering to facilitate precise detection of algal blooms. Furthermore, radiometric calibration—as demonstrated by Tong et al. Tong et al. (2010) —ensures data consistency over time, supporting long-term environmental monitoring and climate studies.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Remote Sensing Data</span>"
+    ]
+  },
+  {
+    "objectID": "Week-3.html#reflection",
+    "href": "Week-3.html#reflection",
+    "title": "3  Remote Sensing Data",
+    "section": "3.3 Reflection",
+    "text": "3.3 Reflection\nThis week’s session really opened my eyes to the behind-the-scenes processes involved in pre-processed satellite data, which I had previously taken for granted. It’s a fascinating blend of physics, mathematics, and coding—far more than just simple data preparation. Each correction (geometric, topographic, and atmospheric) is crucial, yet each introduces potential errors. This makes the entire process a delicate balancing act, where technical details and their limitations significantly shape what we can study with remote sensing. For example, accurate urban heat island studies rely on meticulously removing atmospheric effects; even minor haze correction errors could generate “phantom” hotspots, leading to incorrect conclusions and potentially flawed urban planning. This highlights how hidden preprocessing errors can skew research, emphasising the need for rigorous validation and uncertainty analysis in any remote sensing project.\nThe link between these preprocessing steps and broader data analysis techniques also intrigues me. Geometric and orthorectification corrections, for instance, are not merely cosmetic; they are essential for accurately overlaying diverse datasets, such as combining land cover maps with climate data. This integration is vital for projects like tracking deforestation or modelling urban growth, where analysing changes over time and across different data types is necessary. I am also curious and start wondering about the potential of deep learning, specifically convolutional neural networks (CNNs), to automate or improve these corrections. Could CNNs identify ground control points for geometric correction or enhance atmospheric correction by learning complex atmospheric patterns? The potential for deep learning to increase efficiency and accuracy, particularly given the vast volumes of current satellite data, seems possible. While I don’t foresee myself implementing all these steps, understanding the entire process behind this ready-made data is really interesting.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Remote Sensing Data</span>"
+    ]
+  },
+  {
+    "objectID": "Week-3.html#references",
+    "href": "Week-3.html#references",
+    "title": "3  Remote Sensing Data",
+    "section": "References",
+    "text": "References\n\n\n\n\nArcGIS Blog. (2025). Principal component analysis of multidimensional raster in ArcGIS.\n\n\nBan, S., & Kim, T. (2024). Precise relative geometric correction for multi-sensor satellite images. The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences, XLVIII-2-2024, 17–23. https://doi.org/10.5194/isprs-archives-xlviii-2-2024-17-2024\n\n\nKelcey, J., & Lucieer, A. (2012). Sensor correction and radiometric calibration... The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences, XXXIX-B1, 393–398. https://doi.org/10.5194/isprsarchives-XXXIX-B1-393-2012\n\n\nLu, Z., Li, J., Shen, Q., Zhang, B., Zhang, H., Zhang, F., & Wang, S. (2018). Modification of 6SV to remove skylight reflected at the air-water interface: Application to atmospheric correction of landsat 8 OLI imagery in inland waters. PLOS ONE, 13(8), e0202883. https://doi.org/10.1371/journal.pone.0202883\n\n\nRizeei, H., & Pradhan, B. (2019). Urban mapping accuracy enhancement in high-rise built-up areas deployed by 3D-orthorectification correction from WorldView-3 and LiDAR imageries. Remote Sensing, 11(6), 692. https://doi.org/10.3390/rs11060692\n\n\nTong, X., Liu, S., & Weng, Q. (2010). Bias-corrected rational polynomial coefficients for high accuracy geo-positioning of QuickBird stereo imagery. ISPRS Journal of Photogrammetry and Remote Sensing, 65(2), 218–226. https://doi.org/10.1016/j.isprsjprs.2009.12.004",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Remote Sensing Data</span>"
+    ]
+  },
+  {
+    "objectID": "Week-4.html",
+    "href": "Week-4.html",
+    "title": "4  Remote Sensing in Urban Policy: Addressing Heat Stress in Barcelona",
+    "section": "",
+    "text": "4.1 Summary\nThis week, my focus shifted to Barcelona, a city where I have lived and personally experienced the challenges of extreme urban heat. Walking through neighbourhoods like El Raval and Poblenou during summers, I have experienced firsthand how the city’s narrow streets, dense building clusters, and limited green spaces create a pronounced Urban Heat Island (UHI) effect. Academic research confirms that Barcelona’s extensive impervious surfaces and sparse vegetation lead to significant thermal stress (Lemus-Canovas et al., 2020).\nFor the analysis and after reading how other researchers have used remote sensing to study the UHI effect, different datasets could be integrated: Landsat 8’s thermal infrared bands provide high-resolution land surface temperature (LST) maps that could show a clear correlation between areas with low NDVI (less vegetation) and higher temperatures; Sentinel-2’s optical imagery could help derive vegetation indices to pinpoint where green space is lacking; and MODIS data could contribute to get data for continuous day-and-night temperature profiles. Together, these datasets offer a comprehensive picture of the diurnal cycle of urban heat, including the critical aspect of nighttime heat retention. This fusion of data, as demonstrated by Arellano and Roca (2019; 2021; 2022), could help policymakers with temporally comprehensive heat maps that inform both immediate interventions and long-term planning.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Remote Sensing in Urban Policy: Addressing Heat Stress in Barcelona</span>"
+    ]
+  },
+  {
+    "objectID": "Week-4.html#applications",
+    "href": "Week-4.html#applications",
+    "title": "4  Remote Sensing in Urban Policy: Addressing Heat Stress in Barcelona",
+    "section": "4.2 Applications",
+    "text": "4.2 Applications\nRemote sensing provides a powerful toolkit for tackling the UHI challenge in Barcelona. Researchers like Arellano and Roca have shown that integrating MODIS data with Landsat 8 imagery produces maps that capture both daytime peaks and persistent nighttime heat (Arellano & Roca Cladera, 2019; Arellano & Roca, 2021). This multi-sensor, multi-temporal approach informs policymakers about where to focus interventions—for instance, by locating “climate shelters” in areas that remain hot at night or by prioritising tree planting in zones where green cover is critically low. Studies by Marando et al. (2022) and Iungman et al. (2023) further support these strategies by quantifying the cooling benefits of urban green infrastructure. They report that even a modest increase in urban vegetation can lower local temperatures by up to 2.5°C and improve public health outcomes, providing a clear scientific rationale for setting and monitoring greening targets in Barcelona.\nAcademic literature consistently shows that Barcelona’s UHI is largely driven by its high building density, extensive impervious surfaces, and limited urban vegetation and Lemus Lemus-Canovas et al. (2020) Analysis using Partial Dependence plots also showed that factors like distance to sea, rivers, altitude, building density, and vegetation cover have varying impacts on Barcelona’s surface temperature throughout the year. The sea cools nearby areas in summer but has less effect in winter. Rivers are cooler in winter but warmer in other seasons due to industry. Higher altitude is always cooler, but less so in winter. More buildings mean higher temperatures, especially in summer, while more vegetation consistently lowers temperatures, particularly in spring and summer.\n\n\n\nMean spatial distribution of land surface temperature (LST) for the 4 seasons of the year. - Credit: Lemus-Canovas et al. (2020)\n\n\nLandsat 8 data, as used by Jimenez-Munoz et al. (2014) have allowed for detailed mapping of these thermal anomalies. When these temperature maps are overlaid with NDVI data from Sentinel-2, the cooling impact of even small green spaces becomes evident. For instance, large parks and tree-lined avenues not only exhibit lower temperatures themselves but also extend a cooling effect to nearby areas, creating “cool islands” within the urban fabric (Bouketta, 2023).\nSuch quantitative evidence has directly influenced Barcelona’s urban policy. For example, remote sensing data is used to monitor the progress of greening initiatives under the Barcelona Nature Plan 2030 Ajuntament de Barcelona (2021), which seeks to increase the city’s green cover. The Urban Tree Master Plan Trees for Life (2022) similarly relies on satellite data to map tree canopy density and evaluate the cooling effects of tree planting efforts. Yet, despite these promising applications, there is still a need for policies to include explicit methodological details about the integration of remote sensing techniques, ensuring that these strategies remain transparent and effective over time.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Remote Sensing in Urban Policy: Addressing Heat Stress in Barcelona</span>"
+    ]
+  },
+  {
+    "objectID": "Week-4.html#reflection",
+    "href": "Week-4.html#reflection",
+    "title": "4  Remote Sensing in Urban Policy: Addressing Heat Stress in Barcelona",
+    "section": "4.3 Reflection",
+    "text": "4.3 Reflection\nReflecting on this week’s exploration, I am surprised by how my personal experiences with Barcelona’s heat are also seen in the scientific data. The process of merging data from Landsat 8, Sentinel-2, and MODIS has shown the transformative potential of remote sensing in providing a clear, objective basis for urban policy decisions. While the technical challenges—such as reconciling differing spatial and temporal resolutions—are significant, the benefits of a data-driven approach to mitigating UHI are equally compelling.\nThis analysis of the existing policies and remote sensing research has reinforced my belief that evidence-based policy is the key to creating more sustainable and resilient urban environments. The insights gained from remote sensing not only help identify heat-vulnerable areas but also support the planning and monitoring of urban greening initiatives. I am particularly interested in exploring advanced data fusion techniques and machine learning methods to further enhance these analyses in the future. Integrating scientific research with practical policy measures could help ensure that interventions, such as increasing green infrastructure, are both effective and equitably distributed across Barcelona. I am excited by the prospect of continuing to refine these approaches and applying them for a cooler Barcelona.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Remote Sensing in Urban Policy: Addressing Heat Stress in Barcelona</span>"
+    ]
+  },
+  {
+    "objectID": "Week-4.html#references",
+    "href": "Week-4.html#references",
+    "title": "4  Remote Sensing in Urban Policy: Addressing Heat Stress in Barcelona",
+    "section": "References",
+    "text": "References\n\n\n\n\nAjuntament de Barcelona. (2021). Barcelona Nature Plan 2030. https://bcnroc.ajuntament.barcelona.cat/jspui/handle/11703/123630\n\n\nArellano, B., & Roca Cladera, J. (2019). Combining different sensors for the detailed analysis of the daytime and nighttime UHI. In N. Chrysoulakis, T. Erbertseder, Y. Zhang, & F. Baier (Eds.), Remote Sensing Technologies and Applications in Urban Environments IV (p. 5). SPIE. https://doi.org/10.1117/12.2532461\n\n\nArellano, B., & Roca, J. (2021). REMOTE SENSING AND NIGHT TIME URBAN HEAT ISLAND. The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences, XLIII-B3-2021, 15–22. https://doi.org/10.5194/isprs-archives-XLIII-B3-2021-15-2021\n\n\nArellano, B., & Roca, J. (2022). Assessing urban greenery using remote sensing. In J. J. Butler, X. (Jack). Xiong, & X. Gu (Eds.), Earth Observing Systems XXVII (p. 19). SPIE. https://doi.org/10.1117/12.2632674\n\n\nBouketta, S. (2023). Urban Cool Island as a sustainable passive cooling strategy of urban spaces under summer conditions in Mediterranean climate. Sustainable Cities and Society, 99, 104956. https://doi.org/10.1016/j.scs.2023.104956\n\n\nIungman, T., Cirach, M., Marando, F., Pereira Barboza, E., Khomenko, S., Masselot, P., Quijal-Zamorano, M., Mueller, N., Gasparrini, A., Urquiza, J., Heris, M., Thondoo, M., & Nieuwenhuijsen, M. (2023). Cooling cities through urban green infrastructure: A health impact assessment of european cities. The Lancet, 401(10376), 577–589. https://doi.org/10.1016/S0140-6736(22)02585-5\n\n\nJimenez-Munoz, J. C., Sobrino, J. A., Skokovic, D., Mattar, C., & Cristobal Rosselló, J. (2014). Land surface temperature retrieval methods from landsat-8 thermal infrared sensor data. IEEE Geoscience and Remote Sensing Letters, 11(10), 1840–1843. https://doi.org/10.1109/LGRS.2014.2312032\n\n\nLemus-Canovas, M., Martin-Vide, J., Moreno-Garcia, M. C., & Lopez-Bustins, J. A. (2020). Estimating Barcelona’s metropolitan daytime hot and cold poles using Landsat-8 Land Surface Temperature. Science of The Total Environment, 699, 134307. https://doi.org/10.1016/j.scitotenv.2019.134307\n\n\nMarando, F., Heris, M., Zulian, G., Udías, A., Mentaschi, L., Chrysoulakis, N., Parastatidis, D., & Maes, J. (2022). Urban Heat Island Mitigation by Green Infrastructure: European policy perspectives. Environmental Research, 216, 114387.\n\n\nTrees for Life: Barcelona Tree Master Plan 2017-2037. (2022, April 19). Interlace Hub. https://interlace-hub.com/trees-life-barcelona-tree-master-plan-2017-2037",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Remote Sensing in Urban Policy: Addressing Heat Stress in Barcelona</span>"
+    ]
+  },
+  {
+    "objectID": "Week-5.html",
+    "href": "Week-5.html",
+    "title": "5  Google Earth Engine",
+    "section": "",
+    "text": "5.1 Summary\nThis week, we focused on Google Earth Engine (GEE), a cloud-based platform that’s transforming how we perform geospatial analysis at planetary scale. As an urban sustainability practicioner, I was particularly excited about how GEE democratises access to Earth observation data, especially for studying cities and their environmental challenges. Rather than struggling with downloading massive datasets onto local computers, GEE allows us to retrieve and analyse entire regions directly in the cloud.\nThe lecture walked us through GEE’s capabilities for analysis—from understanding the basic JavaScript syntax, the difference between client and serve sidem the GEE UI and different useful functions and tools.\nBesides the tools GEE offers a vast repository of over 40 years of satellite data, including various datasets from satellites like Landsat, MODIS, and Sentinel, enabling researchers to conduct large-scale analyses without needing extensive local computing resources Kumar & Mutanga (2018)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Google Earth Engine</span>"
+    ]
+  },
+  {
+    "objectID": "Week-5.html#summary",
+    "href": "Week-5.html#summary",
+    "title": "5  Google Earth Engine",
+    "section": "",
+    "text": "Google Earth Engine interface - Credit: Savelonas et al. (2022)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Google Earth Engine</span>"
+    ]
+  },
+  {
+    "objectID": "Week-5.html#applications",
+    "href": "Week-5.html#applications",
+    "title": "5  Google Earth Engine",
+    "section": "5.2 Applications",
+    "text": "5.2 Applications\nGoogle Earth Engine can help with urban climate analysis through processing of thermal data. Yang et al. (2024) developed a novel dynamic equal-area method using 1.6 million Landsat scenes in GEE, creating the first global urban heat island intensity dataset for 10,000+ cities. The analysis revealed that 83% of cities show significant nighttime UHI intensification (&gt;0.08°C/decade), with arid cities exhibiting 2.3× faster warming than humid ones. Parallel work by Liu et al. (2020) harnessed GEE’s temporal stacking capability to process 3.2 million Landsat images, mapping global urban expansion at 30m resolution. Their finding that urban land grew 4× faster than urban population (1985-2015) exposes unsustainable sprawl patterns - data now underpinning UN-Habitat’s urban sustainability indicators.\nGEE’s change detection algorithms enables also forest monitoring at scale. Barenblitt et al. (2021) implemented a hybrid machine learning approach in GEE, combining Random Forest classification with CCDC time-series analysis on Landsat data. This detected 700ha of illegal mining within Ghana’s protected areas - a finding that prompted government enforcement actions. Chen et al. (2021) advanced this by developing a spectral mixture analysis workflow in GEE that differentiates degradation (partial canopy loss) from deforestation. Their method achieved 91% accuracy in Georgia’s forests, revealing degradation impacts 28× more extensive than clear-cutting, critical for carbon stock assessments.\nFor agricultural monitoring, Phalke et al. (2020) leveraged GEE’s parallel processing to analyze 160TB of Landsat data across 64 countries. Their Random Forest model incorporated 26 spectral-temporal features, achieving 93.8% accuracy in cropland identification. The resulting map revealed 12% more cropland in Russia than FAO estimates - a discrepancy crucial for global food production forecasts. This continental-scale analysis would be computationally prohibitive without GEE’s distributed architecture.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Google Earth Engine</span>"
+    ]
+  },
+  {
+    "objectID": "Week-5.html#reflection",
+    "href": "Week-5.html#reflection",
+    "title": "5  Google Earth Engine",
+    "section": "5.3 Reflection",
+    "text": "5.3 Reflection\nWhile I’ve used Google Earth Engine (GEE) before in various projects, this week served as a powerful reminder of the platform’s seemingly endless possibilities. It’s not just the vast data archive and processing power that continues to impress me; it’s the vibrant, ever-growing community of researchers and practitioners who are constantly sharing new datasets, tools, and insights. This collaborative spirit is truly what makes GEE so transformative for analysis.\nWhat excites me most is how GEE could help bridge the gap between environmental science and urban policy-making. The ability to quickly analyse and visualise environmental patterns across entire cities makes it easier to communicate findings to decision-makers. I’m particularly interested in using these tools to support community-led environmental monitoring initiatives or citizen science projects.\nLooking ahead, I’m eager to explore how GEE could support my dissertation on the intersection between urban morphology and urban heat. The platform’s ability to combine multiple data sources—from thermal imagery to vegetation indices—could help identify priority areas for interventions. I’m also intrigued by the possibility of developing custom applications GEE applications.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Google Earth Engine</span>"
+    ]
+  },
+  {
+    "objectID": "Week-5.html#references",
+    "href": "Week-5.html#references",
+    "title": "5  Google Earth Engine",
+    "section": "References",
+    "text": "References\n\n\n\n\nBarenblitt, A., Payton, A., Lagomasino, D., Fatoyinbo, L., Asare, K., Aidoo, K., Pigott, H., Som, C. K., Smeets, L., Seidu, O., & Wood, D. (2021). The large footprint of small-scale artisanal gold mining in ghana. Science of The Total Environment, 781, 146644. https://doi.org/10.1016/j.scitotenv.2021.146644\n\n\nChen, S., Woodcock, C. E., Bullock, E. L., Arévalo, P., & Torchinava, P. (2021). Monitoring temperate forest degradation on google earth engine using landsat time series analysis. Remote Sensing of Environment, 265, 112648. https://doi.org/10.1016/j.rse.2021.112648\n\n\nKumar, L., & Mutanga, O. (2018). Google Earth Engine Applications Since Inception: Usage, Trends, and Potential. Remote Sensing, 10(10), 1509. https://doi.org/10.3390/rs10101509\n\n\nLiu, X., Huang, Y., Xu, X., Li, X., Li, X., Ciais, P., Lin, P., Gong, K., Ziegler, A. D., Chen, A., Gong, P., Chen, J., Hu, G., Chen, Y., Wang, S., Wu, Q., Huang, K., Estes, L., & Zeng, Z. (2020). High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015. Nature Sustainability, 3(7), 564–570. https://doi.org/10.1038/s41893-020-0521-x\n\n\nPhalke, A. R., Özdoğan, M., Thenkabail, P. S., Erickson, T., Gorelick, N., Yadav, K., & Congalton, R. G. (2020). Mapping croplands of europe, middle east, russia, and central asia using landsat 30-m data, machine learning algorithms and google earth engine. ISPRS Journal of Photogrammetry and Remote Sensing, 167, 104–122. https://doi.org/10.1016/j.isprsjprs.2020.06.022\n\n\nSavelonas, M. A., Veinidis, C. N., & Bartsokas, T. K. (2022). Computer Vision and Pattern Recognition for the Analysis of 2D/3D Remote Sensing Data in Geoscience: A Survey. Remote Sensing, 14(23), 6017. https://doi.org/10.3390/rs14236017\n\n\nYang, Q., Xu, Y., Chakraborty, T., Du, M., Hu, T., Zhang, L., Liu, Y., Yao, R., Yang, J., Chen, S., Xiao, C., Liu, R., Zhang, M., & Chen, R. (2024). A global urban heat island intensity dataset: Generation, comparison, and analysis. Remote Sensing of Environment, 312, 114343. https://doi.org/10.1016/j.rse.2024.114343",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Google Earth Engine</span>"
+    ]
+  },
+  {
+    "objectID": "Week-6.html",
+    "href": "Week-6.html",
+    "title": "6  Classification",
+    "section": "",
+    "text": "6.1 Summary\nThis week,we focused on various machine learning techniques applied to remote sensing data. The focus was on classification, the process of categorising pixels into meaningful thematic classes (such as water, forest, urban, etc.) – and, to a lesser extent, regression methods. We explored both unsupervised and supervised approaches:",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Classification</span>"
+    ]
+  },
+  {
+    "objectID": "Week-6.html#summary",
+    "href": "Week-6.html#summary",
+    "title": "6  Classification",
+    "section": "",
+    "text": "Unsupervised Methods: Techniques like K-means or DBSCAN clustering enable us to group pixels based on spectral similarity when class labels are unknown. These methods can reveal inherent patterns, although they may lack the precision of supervised approaches.\nSupervised Classification: Here, we train models on labelled examples. In our practical session, I manually created a training dataset by drawing polygons over different land cover types, and then applied a Random Forest classifier to produce a land cover map.\nDecision Trees & Regression Trees: These models segment the data using a series of if-else conditions, creating a hierarchical tree-like structure. They utilise metrics such as Gini impurity (for classification) or variance reduction (for regression) to decide the best splits at each node. The goal is to create splits that maximize the homogeneity of the resulting subsets. While decision trees categorise data into classes (e.g., forest, water, urban), regression trees are used for predicting continuous outcomes (e.g., biomass, temperature). A key advantage of decision trees is their interpretability; the decision rules are easily visualised and understood. A common challenge with these trees is overfitting, which can be mitigated by pruning less informative branches, limiting the tree depth, or setting a minimum number of samples required at each leaf node. Pruning involves removing branches that do not significantly improve the model’s performance on a validation dataset.\nRandom Forests: This method builds many decision trees. Each tree is made using a random sample of the data and a random subset of the available features. This randomness makes the trees different from each other. When predicting, each tree makes its own prediction. For classification, the final prediction is the one chosen by most trees (like voting). For regression, the final prediction is the average of all the trees’ predictions. Combining many different trees in this way makes random forests more accurate and less likely to overfit compared to a single decision tree. The randomness helps to make the trees independent, leading to a better overall model.\n\n\n\n\nRandom Forest Algorithm - Credit: Aziz et al. (2024)\n\n\n\nSupport Vector Machines (SVM): Support Vector Machines offer a distinct approach to classification. Instead of methods like decision trees, SVMs operate by identifying an optimal boundary, called a hyperplane, within a multi-dimensional space representing the different features. This hyperplane is positioned to best separate different classes of data. If the data cannot be separated cleanly by a straight line (or a flat plane in higher dimensions), SVMs can employ kernel functions. These functions transform the data into a higher-dimensional space where linear separation becomes possible, effectively allowing for non-linear decision boundaries in the original feature space.\n\n\n\n\nSupport Vector Machine - Credit: Mountrakis et al. (2011)",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Classification</span>"
+    ]
+  },
+  {
+    "objectID": "Week-6.html#applications",
+    "href": "Week-6.html#applications",
+    "title": "6  Classification",
+    "section": "6.2 Applications",
+    "text": "6.2 Applications\nUnsupervised approaches, particularly valuable when labeled training data is scarce, provide crucial initial insights into land cover change and anomaly detection. For instance, Lv et al. (2019) combined K-means clustering with adaptive majority voting for change detection, achieving 92.3% accuracy in identifying urban expansion from bitemporal Landsat imagery, outperforming traditional PCA. Similarly, Artés et al. (2019) used DBSCAN for global wildfire analysis, revealing critical fire regime patterns and identifying 23% more true fire clusters than threshold-based methods. This, combined with temporal analysis of MODIS data, differentiated agricultural burns from uncontrolled wildfires, demonstrating how unsupervised methods provide foundational understanding before more resource-intensive supervised techniques are applied.\nSupervised learning techniques, particularly Random Forest (RF), have become dominant in land cover change studies due to their ability to handle noisy satellite data and large datasets. For example, RF has been used for mapping urban growth with high accuracy, as demonstrated by Frimpong et al. (2021)’s study of Kumasi, and for tracking deforestation by combining Landsat and Sentinel-2 data, as shown by Sun & Yordanov (2020). While RF excels in capturing complex dynamics like wetland hydrology (Zhang et al., 2024), Support Vector Machines (SVMs) can outperform RF in distinguishing fine urban features due to their ability to capture subtle spectral differences (Dabija et al., 2021).\nHybrid approaches are increasingly being used to leverage the strengths of different classifiers. These approaches combine techniques like SVM and object-based analysis for urban green space mapping (Kranjčić et al., 2019) or integrate RF with SVM for improved crop monitoring (Wei et al., 2023). This trend suggests a move towards a combined paradigm where unsupervised methods initially segment data, supervised classifiers add labels, and ensemble methods handle remaining uncertainties.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Classification</span>"
+    ]
+  },
+  {
+    "objectID": "Week-6.html#reflection",
+    "href": "Week-6.html#reflection",
+    "title": "6  Classification",
+    "section": "6.3 Reflection",
+    "text": "6.3 Reflection\nI found the exploration of classification techniques challenging but also really interesting and thought-provoking. Learning about decision trees, their susceptibility to overfitting, and how ensemble methods like random forests can overcome these issues provided a deeper understanding of model behaviour. The contrast between traditional methods and modern approaches, such as SVMs and deep learning.\nWas also interesting to remember that while advanced models are appealing, classical or more simple techniques remain highly effective for many remote sensing applications – and often at a much lower computational cost. This made me reflect on the critical role of domain expertise. Sometimes, with sufficient understanding of the specific data and the phenomena being studied, simpler, less computationally intensive methods might not only be sufficient but could even yield more accurate or interpretable results. We might get lost in the complexities of ML, overlooking the potential of a well-informed, simpler approach.\nThis week has not only built my technical skills in applying machine learning to raster data but also reinforced the critical importance of domain knowledge and I’m excited to further explore these methods in real-world scenarios.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Classification</span>"
+    ]
+  },
+  {
+    "objectID": "Week-6.html#references",
+    "href": "Week-6.html#references",
+    "title": "6  Classification",
+    "section": "References",
+    "text": "References\n\n\n\n\nArtés, T., Oom, D., Rigo, D. de, Durrant, T. H., Maianti, P., Libertá, G., & San-Miguel-Ayanz, J. (2019). A global wildfire dataset for the analysis of fire regimes and fire behaviour. Scientific Data, 6, 296. https://doi.org/10.1038/s41597-019-0312-2\n\n\nAziz, G., Minallah, N., Saeed, A., Frnda, J., & Khan, W. (2024). Remote sensing based forest cover classification using machine learning. Scientific Reports, 14(1), 69. https://doi.org/10.1038/s41598-023-50863-1\n\n\nDabija, A., Kluczek, M., Zagajewski, B., Raczko, E., & Kycko, M. (2021). Comparison of support vector machines and random forests for Corine land cover mapping. Remote Sensing, 13(4), 777. https://doi.org/10.3390/rs13040777\n\n\nFrimpong, B. F., Molkenthin, F., Asubonteng, K. O., & Osei, F. B. (2021). Tracking urban expansion using random forests for the classification of landsat imagery (1986–2015) and predicting urban/built-up areas for 2025: A study of the kumasi metropolis, ghana. Land, 10(1), 44. https://doi.org/10.3390/land10010044\n\n\nKranjčić, N., Medak, D., Župan, R., & Rezo, M. (2019). Support vector machine accuracy assessment for extracting green urban areas in towns. Remote Sensing, 11(6), 655. https://doi.org/10.3390/rs11060655\n\n\nLv, Z., Liu, T., Shi, C., Benediktsson, J. A., & Du, H. (2019). Novel land cover change detection method based on k-means clustering and adaptive majority voting using bitemporal remote sensing images. IEEE Access, 7, 34425–34437. https://doi.org/10.1109/ACCESS.2019.2903561\n\n\nMountrakis, G., Im, J., & Ogole, C. (2011). Support vector machines in remote sensing: A review. ISPRS Journal of Photogrammetry and Remote Sensing, 66(3), 247–259. https://doi.org/10.1016/j.isprsjprs.2010.11.001\n\n\nSun, Y., & Yordanov, V. (2020). Monitoring forest change in the amazon using multi-temporal remote sensing data and machine learning classification on Google Earth Engine. ISPRS Int. J. Geo-Inf., 9(10), 580. https://doi.org/10.3390/ijgi9100580\n\n\nWei, P., Ye, H., Qiao, S., Liu, R., Nie, C., Zhang, B., Song, L., & Huang, S. (2023). Early crop mapping based on Sentinel-2 time-series data and the random forest algorithm. Remote Sensing, 15(13), 3212. https://doi.org/10.3390/rs15133212\n\n\nZhang, J., Liu, X., Qin, Y., Fan, Y., & Cheng, S. (2024). Wetlands mapping and monitoring with long-term time series satellite data based on google earth engine, random forest, and feature optimization: A case study in gansu province, china. Land, 13(9), 1527. https://doi.org/10.3390/land13091527",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Classification</span>"
+    ]
+  },
+  {
+    "objectID": "Week-7.html",
+    "href": "Week-7.html",
+    "title": "7  Assessment of classification methods",
+    "section": "",
+    "text": "8 Week 7: Understanding Classification in Remote Sensing",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Assessment of classification methods</span>"
+    ]
+  },
+  {
+    "objectID": "Week-7.html#summary",
+    "href": "Week-7.html#summary",
+    "title": "7  Assessment of classification methods",
+    "section": "8.1 Summary",
+    "text": "8.1 Summary\nThis week we continued with classification but now focusing on determining the accuracy of classification, moving beyond basic pixel‐based approaches towards more refined methods that account for the spatial structure of remotely sensed data. Building on the foundations laid in previous sessions, we explored methods such as Object‐Based Image Analysis (OBIA) and sub‐pixel analysis, which allow for a more natural segmentation of imagery.\n\n8.1.1 Object‐Based Image Analysis (OBIA)\nOBIA involves grouping pixels into coherent objects or ‘superpixels’ based on spectral and spatial similarities. Algorithms such as Simple Linear Iterative Clustering (SLIC) partition an image into segments that are both spatially compact and spectrally homogenous, enabling classification at the object level—be it buildings, water bodies or vegetation patches—rather than relying solely on individual pixels.\n\n\n8.1.2 Sub‐Pixel Analysis\nIn contrast, sub‐pixel analysis recognises that a single pixel may represent a mix of land‐cover types. Techniques such as Multiple Endmember Spectral Mixture Analysis (MESMA) are used to unmix a pixel’s spectral signature and estimate the proportion of different classes (e.g. soil, vegetation, impervious surfaces). This approach is particularly beneficial when working with lower resolution imagery where mixed pixels are common.\n\n\n\nSubpixel analysis method - Credit: Ai et al. (2014)\n\n\n\n\n8.1.3 Accuracy Assessment\nA central focus this week was on evaluating how well our classification models actually performed. It’s one thing to create a map; it’s another to know how trustworthy that map is. I explored several key metrics, each providing a different perspective on accuracy.\nClassification accuracy assessment relies on several key metrics derived from a confusion matrix. The confusion matrix is a table that summarizes the performance of a classification model by showing the counts of:\n\nTrue Positives (TP): Correctly predicted positive cases.\nTrue Negatives (TN): Correctly predicted negative cases.\nFalse Positives (FP): Incorrectly predicted positive cases (Type I error).\nFalse Negatives (FN): Incorrectly predicted negative cases (Type II error).\n\nFrom this matrix, we can calculate several important metrics:\n\nProducer’s Accuracy (Recall): Measures the proportion of actually positive cases that were correctly identified. It answers the question: “For all instances of a specific class (e.g., forest) in the reference data, what proportion did the classification correctly identify?” A high producer’s accuracy indicates that the model is good at finding all instances of that class. It is calculated as:\n\\[ \\text{Producer's Accuracy (Recall)} = \\frac{TP}{TP + FN} \\]\nUser’s Accuracy (Precision): Measures the proportion of predicted positive cases that were actually correct. It answers the question: “For all instances that the classification labeled as a specific class (e.g., forest), what proportion actually belonged to that class?” High user’s accuracy means that when the map labels something, you can trust that label. It is calculated as:\n\\[ \\text{User's Accuracy (Precision)} = \\frac{TP}{TP + FP} \\]\nOverall Accuracy: Measures the proportion of all samples that were correctly classified. \\[ \\text{Overall Accuracy} = \\frac{TP + TN}{TP + TN + FP + FN} \\]\n\nAnother metric, the Kappa Coefficient, tries to go a step further by accounting for how much agreement between the map and reality might just be due to random chance. However, it’s not without its critics, and its interpretation can be tricky. We also looked at ROC Curves and F1 Scores, which provide even more nuanced ways to assess performance, especially when dealing with imbalanced datasets (where some classes are much more common than others). They help us understand the trade-off between correctly identifying positive cases (true positives) and incorrectly identifying negative cases as positive (false positives).\nWe also delved into more advanced machine learning approaches, particularly focusing on how to validate our models in a spatially aware way. Techniques like spatial spatial cross-validation is crucial. Helps avoiding spatial autocorrelation, which can artificially inflate our accuracy estimates. By ensuring that training and testing data are spatially separated, we get a much more realistic sense of how well our model will generalise to new, unseen areas and prevent leakage.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Assessment of classification methods</span>"
+    ]
+  },
+  {
+    "objectID": "Week-7.html#applications-in-research",
+    "href": "Week-7.html#applications-in-research",
+    "title": "7  Assessment of classification methods",
+    "section": "8.2 Applications in Research",
+    "text": "8.2 Applications in Research\nAdvanced classification techniques enable more nuanced analysis across scales. Object-Based Image Analysis (OBIA) has proven particularly valuable for land cover classification, with Ma et al. (2017) demonstrating how supervised OBIA methods can achieve &gt;85% accuracy in complex metropolitan areas by incorporating structural metrics like building shape and road connectivity. For sub-pixel analysis, Liu & Yang (2013) showed spectral unmixing techniques improved urban vegetation mapping accuracy by 22% compared to traditional classifications in Atlanta, GA, while Thorp et al. (2013) successfully quantified shrub encroachment in arid rangelands using Landsat-based MESMA across 150,000 km².\nSpatial validation methods address critical limitations in accuracy assessment. Stock et al. (2022) developed iterative spatial cross-validation that reduced accuracy overestimation by 18-35% in marine remote sensing models compared to random splits. This approach ensures models generalise to new locations rather than just nearby pixels, particularly crucial for monitoring programs requiring consistent performance across political/ecological boundaries.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Assessment of classification methods</span>"
+    ]
+  },
+  {
+    "objectID": "Week-7.html#reflection",
+    "href": "Week-7.html#reflection",
+    "title": "7  Assessment of classification methods",
+    "section": "8.3 Reflection",
+    "text": "8.3 Reflection\nThis week’s exploration of advanced classification really opened my eyes to the nuances of different approaches. I found the balance between producer’s and user’s accuracies particularly striking—it really highlights the trade-off between over-classification and under-classification. The discussion on spatial cross-validation was an ‘aha!’ moment for me. ’d been treating validation like a simple random sampling problem, never considering how spatial relationships could skew our accuracy assessments. It seems so obvious now - pixels next to each other aren’t independent observations. This realisation fundamentally changes how I’ll approach validation in my future work.\nOBIA and sub-pixel analysis showed me how far we’ve come from basic pixel-based methods. These approaches acknowledge what we intuitively know, that landscapes don’t conform to neat pixel boundaries. Instead of forcing reality into a rigid grid, these methods adapt to the natural complexity of our world. It’s not just about better accuracy numbers; it’s about creating classifications that actually reflect what we see on the ground.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Assessment of classification methods</span>"
+    ]
+  },
+  {
+    "objectID": "Week-7.html#references",
+    "href": "Week-7.html#references",
+    "title": "7  Assessment of classification methods",
+    "section": "References",
+    "text": "References\n\n\n\n\nAi, B., Liu, X., Hu, G., & Li, X. (2014). Improved Sub-Pixel Mapping Method Coupling Spatial Dependence With Directivity and Connectivity. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 7(12), 4887–4896. https://doi.org/10.1109/JSTARS.2014.2313978\n\n\nLiu, T., & Yang, X. (2013). Mapping vegetation in an urban area with stratified classification and multiple endmember spectral mixture analysis. Remote Sensing of Environment, 133, 251–264.\n\n\nMa, L., Li, M., Ma, X., Cheng, L., Du, P., & Liu, Y. (2017). A review of supervised object-based land-cover image classification. ISPRS Journal of Photogrammetry and Remote Sensing, 130, 277–293.\n\n\nStock, A., Subramaniam, A., Dijken, G. van, Wedding, L. M., Arrigo, K. R., & Mills, M. M. (2022). Iterative spatial leave-one-out cross-validation and gap-filling based data augmentation for supervised learning applications in marine remote sensing. GIScience & Remote Sensing, 59, 1281–1300.\n\n\nThorp, K. R., French, A. N., & Rango, A. (2013). Effect of image spatial and spectral characteristics on mapping semi-arid rangeland vegetation using multiple endmember spectral mixture analysis (MESMA). Remote Sensing of Environment, 132, 120–130.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Assessment of classification methods</span>"
+    ]
+  },
+  {
+    "objectID": "Week-8.html",
+    "href": "Week-8.html",
+    "title": "8  Synthetic Apperture Radar",
+    "section": "",
+    "text": "8.1 Summary\nIn the las week of the course we explored Synthetic Aperture Radar (SAR), a unique remote sensing technology distinct from the passive optical sensors discussed previously. Unlike passive sensors that detect reflected sunlight, SAR is an active sensor. It emits its own microwave radiation and measures the signal reflected back from the Earth’s surface. Because microwaves are much longer wavelengths than visible or infrared light (centimeters vs. nanometers), SAR can penetrate clouds, making it an all-weather imaging system.\nA key concept in SAR is the “synthetic aperture.” Because the resolution of radar is related to the antenna size relative to the wavelength, a very large antenna would normally be needed to achieve high resolution. SAR cleverly overcomes this by using the satellite’s motion along its orbit. By combining signals received at different points along the flight path, it synthesises a much larger antenna, dramatically improving resolution. This allows a relatively small physical antenna to produce high-resolution imagery.\nSAR data provides information beyond what optical sensors can offer. The primary measurement is backscatter (or amplitude), representing the intensity of the radar signal returned to the sensor. Different surfaces interact with radar signals differently. Smooth surfaces like calm water reflect the signal away (low backscatter, appearing dark), while rough surfaces like bare ground scatter it in all directions, including back to the sensor (higher backscatter). Buildings often exhibit a “double bounce,” reflecting strongly.\nSAR signals also have polarisation. The signal can be transmitted and received horizontally (H) or vertically (V). Different polarizations (HH, VV, HV, VH) interact differently with surfaces. For example, rough surfaces scatter VV signals well, while vegetation often scatters cross-polarized signals (VH or HV) more effectively. Finally, SAR measures the phase of the returning signal. Phase changes are subtle, but by comparing repeat observations, we can detect very small changes in distance, enabling applications like monitoring ground deformation after earthquakes.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Synthetic Apperture Radar</span>"
+    ]
+  },
+  {
+    "objectID": "Week-8.html#summary",
+    "href": "Week-8.html#summary",
+    "title": "8  Synthetic Apperture Radar",
+    "section": "",
+    "text": "Different materials has different backscatter - Credit: Earth Science Data Systems (2021)\n\n\n\n\n\n\nDifferent polarisation types - Credit: Introduction to SAR - HyP3 (n.d.)",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Synthetic Apperture Radar</span>"
+    ]
+  },
+  {
+    "objectID": "Week-8.html#applications",
+    "href": "Week-8.html#applications",
+    "title": "8  Synthetic Apperture Radar",
+    "section": "8.2 Applications",
+    "text": "8.2 Applications\nSAR’s operational value emerges most clearly in geohazard monitoring, though not without constraints. Martinis et al. (2015)’s automated flood mapping system marked a watershed moment for disaster response, processing TerraSAR-X imagery within 15 minutes of acquisition. However, their reliance on single-polarization VV data proved inadequate in vegetated floodplains where submerged canopies mimic dry land - a limitation later addressed by Grimaldi et al. (2020) through multi-temporal coherence analysis. Similarly, Massonnet et al. (1993)’s seminal InSAR analysis of the Landers earthquake achieved 3cm displacement accuracy, yet subsequent studies revealed persistent challenges: their phase unwrapping approach failed in areas with &gt;50% vegetation cover, necessitating the development of persistent scatterer techniques for reliable urban monitoring.\nThe technology’s environmental applications reveal similar trade-offs between innovation and operational reality. Le Toan et al. (2011)’s BIOMASS mission proposal promised revolutionary 3D forest mapping via P-band SAR, but early trials exposed critical limitations - tropical forests with biomass &gt;300Mg/ha caused signal saturation, while ionospheric disturbances introduced ~20% height measurement errors at equatorial latitudes. In maritime domains, Brekke & Solberg (2005)’s oil spill detection framework achieved 89% accuracy in controlled conditions, but real-world implementation during the 2010 Deepwater Horizon spill saw false alarms increase to 35% due to algal blooms and low-wind zones mimicking spill signatures. These cases underscore SAR’s paradoxical nature: its all-weather capability comes at the price of heightened sensitivity to non-target phenomena, requiring sophisticated contextual analysis to extract actionable insights.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Synthetic Apperture Radar</span>"
+    ]
+  },
+  {
+    "objectID": "Week-8.html#reflection",
+    "href": "Week-8.html#reflection",
+    "title": "8  Synthetic Apperture Radar",
+    "section": "8.3 Reflection",
+    "text": "8.3 Reflection\nBefore this week, SAR had always felt somewhat enigmatic to me; I appreciated its power, but I found many of its images and underlying concepts less intuitive than those of optical remote sensing. However, after our focused study, I now feel more confident in interpreting SAR data. One striking moment was when I compared a SAR image to its optical counterpart: features such as forests, which appeared straightforward in optical imagery, were depicted quite differently in radar data, and subtle details—like waterlogged fields—became apparent only in the SAR image. This exercise vividly illustrated how SAR offers a fundamentally different perspective on the Earth’s surface.\nAdditionally, our technical discussions revealed the complexities of SAR operation. Understanding that the radar is side-looking helped explain phenomena such as layover, where tall objects are smeared towards the sensor, and shadow effects, where features are obscured behind taller obstacles. These insights underscored the importance of using supplementary data, like a DEM, for proper orthorectification. I also appreciated learning about real-world applications, such as flood mapping and maritime surveillance using Sentinel-1 imagery, which demonstrated that SAR is not merely an experimental tool, but a highly operational technology.\nOn reflection, I recognise that developing SAR expertise will significantly enhance my versatility as a remote sensing analyst. I am now motivated to pursue further training—perhaps through an online tutorial or short course using ESA’s SNAP toolbox—to refine my skills in processing SAR data. Although the inherent speckle noise in SAR images initially appeared daunting, I now view it as a characteristic feature of coherent imaging that can be effectively managed with appropriate filtering techniques.\nIn summary, this week was a challenging but enlightening foray into the microwave realm of remote sensing. The experience has broadened my perspective, reinforcing that SAR not only complements optical data but also provides unique insights in conditions where optical sensors struggle, thereby enriching my overall analytical toolkit.\nImages\nSpectrum\nSAR Polarisation",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Synthetic Apperture Radar</span>"
+    ]
+  },
+  {
+    "objectID": "Week-8.html#references",
+    "href": "Week-8.html#references",
+    "title": "8  Synthetic Apperture Radar",
+    "section": "8.4 References",
+    "text": "8.4 References\n\n\n\n\nBrekke, C., & Solberg, A. H. S. (2005). Oil spill detection by satellite remote sensing. Remote Sensing of Environment, 95(1), 1–13. https://doi.org/10.1016/j.rse.2005.02.015\n\n\nEarth Science Data Systems, N. (2021). Synthetic Aperture Radar (SAR)  NASA Earthdata [Data {{Basics}}]. https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/sar; Earth Science Data Systems, NASA.\n\n\nGrimaldi, S., Xu, J., Li, Y., Pauwels, V. R. N., & Walker, J. P. (2020). Flood mapping under vegetation using single SAR acquisitions. Remote Sensing of Environment, 237, 111582. https://doi.org/10.1016/j.rse.2019.111582\n\n\nIntroduction to SAR - HyP3. (n.d.). https://hyp3-docs.asf.alaska.edu/guides/introduction_to_sar/.\n\n\nLe Toan, T., Quegan, S., Davidson, M. W. J., Balzter, H., Paillou, P., Papathanassiou, K., Plummer, S., Rocca, F., Saatchi, S., Shugart, H., & Ulander, L. (2011). The BIOMASS mission: Mapping global forest biomass to better understand the terrestrial carbon cycle. Remote Sensing of Environment, 115(11), 2850–2860. https://doi.org/10.1016/j.rse.2011.03.020\n\n\nMartinis, S., Kersten, J., & Twele, A. (2015). A fully automated TerraSAR-X based flood service. ISPRS Journal of Photogrammetry and Remote Sensing, 104, 203–212. https://doi.org/10.1016/j.isprsjprs.2015.07.014\n\n\nMassonnet, D., Rossi, M., Carmona, C., Adragna, F., Peltzer, G., Feigl, K., & Rabaute, T. (1993). The displacement field of the Landers earthquake mapped by radar interferometry. Nature, 364(6433), 138–142. https://doi.org/10.1038/364138a0",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Synthetic Apperture Radar</span>"
+    ]
+  }
+]
